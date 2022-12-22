@@ -2,7 +2,7 @@ import { IonButton } from '@ionic/react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
-import DialogBox from '../DialogContainer/DialogBox'
+import { DialogBox } from '@/components/common'
 
 interface ContainerProps {
   name: string
@@ -37,7 +37,9 @@ const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
             UI Components
           </a>
         </p>
-        <IonButton onClick={openModal}>Open Dialog</IonButton>
+        <IonButton fill="outline" onClick={openModal}>
+          <span>Open Dialog</span>
+        </IonButton>
       </div>
       <DialogBox closeModal={closeModal} isOpen={isOpen} />
     </motion.div>

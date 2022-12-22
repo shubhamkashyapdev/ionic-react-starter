@@ -1,6 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react'
 
-import { ExploreContainer } from '../common'
+import { ExploreContainer } from '@/components/common'
 
 const Tab2: React.FC = () => {
   return (
