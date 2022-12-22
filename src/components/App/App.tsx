@@ -1,19 +1,20 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
+  IonHeader,
   IonIcon,
   IonLabel,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
   IonTabs,
+  IonTitle,
+  IonToolbar,
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import {Tab1,Tab2,Tab3} from '../Tabs'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -31,13 +32,16 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
-/* Theme variables */
-import './theme/variables.css';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
+     <IonHeader>
+        <IonToolbar>
+          <IonTitle className='text-indigo-100'>Header Toolbar</IonTitle>
+        </IonToolbar>
+      </IonHeader>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
