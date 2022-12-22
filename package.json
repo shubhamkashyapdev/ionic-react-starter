@@ -46,7 +46,8 @@
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "lint": "npx eslint src/*",
     "lint:fix": "npx eslint src/* --fix",
-    "format": "yarn prettier && yarn lint:fix"
+    "format": "yarn prettier && yarn lint:fix",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
