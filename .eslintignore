@@ -1,0 +1,6 @@
+*.css
+*.svg
+src/*.test.ts
+vite.config.ts
+*worker.ts
+serviceWorkerRegistration.ts

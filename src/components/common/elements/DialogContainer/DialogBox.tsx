@@ -1,10 +1,11 @@
-import { Fragment, FC } from "react";
-import { Transition, Dialog } from "@headlessui/react";
+import { Dialog, Transition } from '@headlessui/react'
+import type { FC } from 'react'
+import { Fragment } from 'react'
 
 type DialogTypes = {
-  isOpen: boolean;
-  closeModal: () => void;
-};
+  isOpen: boolean
+  closeModal: () => void
+}
 
 const DialogBox: FC<DialogTypes> = ({ isOpen, closeModal }) => {
   return (
@@ -19,7 +20,7 @@ const DialogBox: FC<DialogTypes> = ({ isOpen, closeModal }) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black bg-opacity-25" />
+          <div className="fixed inset-0 bg-black/25" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
@@ -33,17 +34,14 @@ const DialogBox: FC<DialogTypes> = ({ isOpen, closeModal }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                <Dialog.Title
-                  as="h3"
-                  className="text-lg font-medium leading-6 text-gray-900"
-                >
+              <Dialog.Panel className="w-full max-w-md overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
                   Payment successful
                 </Dialog.Title>
                 <div className="mt-2">
                   <p className="text-sm text-gray-500">
-                    Your payment has been successfully submitted. We’ve sent you
-                    an email with all of the details of your order.
+                    Your payment has been successfully submitted. We’ve sent you an email with all
+                    of the details of your order.
                   </p>
                 </div>
 
@@ -62,7 +60,7 @@ const DialogBox: FC<DialogTypes> = ({ isOpen, closeModal }) => {
         </div>
       </Dialog>
     </Transition>
-  );
-};
+  )
+}
 
-export default DialogBox;
+export default DialogBox

@@ -1,28 +1,34 @@
-import { Dialog, Switch, Transition } from "@headlessui/react";
-import { motion } from "framer-motion";
-import { IonButton } from "@ionic/react";
-import { useState, Fragment } from "react";
-import { DialogBox } from "..";
+import { IonButton } from '@ionic/react'
+import { motion } from 'framer-motion'
+import { useState } from 'react'
+
+import DialogBox from '../DialogContainer/DialogBox'
+
 interface ContainerProps {
-  name: string;
+  name: string
 }
 
 const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
   function closeModal() {
-    setIsOpen(false);
+    setIsOpen(false)
   }
 
   function openModal() {
-    setIsOpen(true);
+    setIsOpen(true)
   }
-  console.log(isOpen);
+
   return (
-    <motion.div initial={{x: -200}} animate={{x: 0}} transition={{duration: 1}} className="grid place-content-center py-10">
-      <div className="p-4 rounded-md shadow-lg text-center">
+    <motion.div
+      initial={{ x: -200 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 1 }}
+      className="grid place-content-center py-10"
+    >
+      <div className="rounded-md p-4 text-center shadow-lg">
         <strong className="text-indigo-500 underline">{name}</strong>
         <p>
-          Explore{" "}
+          Explore
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -35,7 +41,7 @@ const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
       </div>
       <DialogBox closeModal={closeModal} isOpen={isOpen} />
     </motion.div>
-  );
-};
+  )
+}
 
-export default ExploreContainer;
+export default ExploreContainer
