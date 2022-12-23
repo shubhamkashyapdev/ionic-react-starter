@@ -29,7 +29,7 @@ import { IonReactRouter } from '@ionic/react-router'
 import { ellipse, square, triangle } from 'ionicons/icons'
 import { Redirect, Route } from 'react-router-dom'
 
-import { Tab1, Tab2, Tab3 } from '../Tabs'
+import { Tab1, Tab2, Tab3 } from '@/components/Tabs'
 
 setupIonicReact()
 

@@ -1,7 +1,6 @@
 import create from 'zustand'
 
-import type { User } from '../types'
-import type { AuthStoreType } from '../types/storeTypes'
+import type { AuthStoreType, User } from '@/types'
 
 const useAuthStore = create((set) => ({
   loading: false,
