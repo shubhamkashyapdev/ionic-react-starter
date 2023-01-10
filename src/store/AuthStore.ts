@@ -1,6 +1,5 @@
+import type { AuthStoreType, User } from 'src/types'
 import create from 'zustand'
-
-import type { AuthStoreType, User } from '@/types'
 
 const useAuthStore = create((set) => ({
   loading: false,

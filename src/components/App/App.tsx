@@ -28,8 +28,7 @@ import {
 import { IonReactRouter } from '@ionic/react-router'
 import { ellipse, square, triangle } from 'ionicons/icons'
 import { Redirect, Route } from 'react-router-dom'
-
-import { Tab1, Tab2, Tab3 } from '@/components/Tabs'
+import { Tab1, Tab2, Tab3 } from 'src/components/Tabs'
 
 setupIonicReact()
 
@@ -59,15 +58,15 @@ const App: React.FC = () => (
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+            <IonLabel>Resume</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
             <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+            <IonLabel>Templates</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonLabel>Analytics</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
